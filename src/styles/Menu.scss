@@ -3,9 +3,12 @@
 .Menu {
 	width: 100px;
 	height: auto;
-	border: 1px solid var(--very-light-pink);
+	border: 1px solid var(--hospital-green);
 	border-radius: 6px;
 	padding: 20px 20px 0 20px;
+	position: absolute;
+	right: 0;
+	top: 62px;
 }
 .Menu ul {
 	list-style: none;
