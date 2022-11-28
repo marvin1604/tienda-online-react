@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Checkout.scss"
+import OrdenItem from '../components/OrdenItem'
 
 const Checkout = () => {
   return (
@@ -15,11 +16,11 @@ const Checkout = () => {
                     <p>$560.00</p>
                 </div>
             </div>
-            <OrderItem />
+            <OrdenItem />
         </div>
     </div>
 
   )
 }
 
-export default Checkout
+export default Checkout 

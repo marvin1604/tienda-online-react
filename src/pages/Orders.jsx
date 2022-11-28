@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Orders.scss"
+import OrdenItem from '../components/OrdenItem'
 
 const Orders = () => {
   return (
@@ -7,7 +8,7 @@ const Orders = () => {
         <div className="Orders-container">
             <h1 className="title">My orders</h1>
             <div className="Orders-content">
-                <OrderItem />
+                <OrdenItem />
             </div>
         </div>
     </div>

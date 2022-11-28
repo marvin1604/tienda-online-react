@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/ProductList.scss"
+import ProductItem from "../components/ProductItem"
 
 const ProductList = () => {
   return (
