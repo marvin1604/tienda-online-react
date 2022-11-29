@@ -21,14 +21,14 @@ const App = () => {
   const initialState = useInitialState();
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
+      <BrowserRouter basename='/tienda-online-react'>
         <Header/>
         <Layout>
           <Routes>
-            <Route path = "/tienda-online-react/" element={<Home />} />
-            <Route path = "/tienda-online-react/checkout" element={<Checkout/>} />
-            <Route path = "/tienda-online-react/createaccount" element={<CreateAccount/>} />
-            <Route path = "/tienda-online-react/login" element={<Login/>} />
+            <Route path = "/" element={<Home />} />
+            <Route path = "/checkout" element={<Checkout/>} />
+            <Route path = "/createaccount" element={<CreateAccount/>} />
+            <Route path = "/login" element={<Login/>} />
             <Route path = "/myaccount" element={<MyAccount/>}/>
             <Route path = "/newpassword" element={<NewPassword/>}/>
             <Route path = "/orders" element={<Orders/>}/>
