@@ -9,10 +9,10 @@ const Menu = () => {
                 <a href="/" className="title">My orders</a>
             </li>
             <li>
-                <a href="/">My account</a>
+                <a href="/myaccount">My account</a>
             </li>
             <li>
-                <a href="/">Sign out</a>
+                <a href="/login">Sign out</a>
             </li>
         </ul>
     </div>

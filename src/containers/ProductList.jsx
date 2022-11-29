@@ -1,20 +1,22 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import "@styles/ProductList.scss"
 import ProductItem from "@components/ProductItem";
 import useGetProducts from '../hooks/useGetProducts';
-import axios from 'axios'
+import AppContext from '../context/AppContext';
 
-const API = "https://api.escuelajs.co/api/v1/products";
-
-const ProductList = () => {
+const ProductList = ({categori, categoriName}) => {
+  const API = `https://api.escuelajs.co/api/v1${categori}/products?limit=40&offset=1`;
+  console.log(categoriName)
   const products = useGetProducts(API);
+  
   return (
     <section className="main-container">
-        <div className="ProductList">
+      <h1>{categoriName}</h1>
+      <div className="ProductList">
         {products.map(product =>(
-          <ProductItem product= {product} key={product.id}/>
+        <ProductItem product= {product} key={product.id}/>
         ))}
-        </div>
+      </div>
     </section>
   )
 }

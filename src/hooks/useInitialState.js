@@ -1,11 +1,16 @@
 import { useState } from "react";
 
 const initialState ={
-    cart:[],
+    cart:[]
+}
+
+const initialStateCategory={
+    catego:["1"]
 }
 
 const useInitialState = () =>{
     const [state, setState] = useState(initialState);
+    const [categori, setCategori] = useState(initialStateCategory);
 
     const addToCart = (payload) =>{
         setState({
@@ -20,10 +25,21 @@ const useInitialState = () =>{
             cart: state.cart.filter(items => items.id !== payload.id)
         })
     }
+
+    const categoriSet = (payload) =>{
+        setCategori({
+            ...categori,
+            catego: [categori.catego, payload]
+        })
+    }
+
+
     return{
         state,
         addToCart,
-        removeToCart
+        removeToCart,
+        categoriSet,
+        categori
     }
 }
 

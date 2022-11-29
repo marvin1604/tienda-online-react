@@ -12,10 +12,16 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 const Header = () => {
     const [toggle, setToggle]= useState(false);
     const [toggleOrders, setToggleOrders] = useState(false);
-    const {state} = useContext(AppContext);
+    const {state, categoriSet } = useContext(AppContext);
 
     const handleToggle= () =>{
         setToggle(!toggle);
+    }
+
+    const handleCategory= (event) =>{
+        console.log(event.target.name);
+        categoriSet(event.target.name);
+
     }
   return (
     <nav>
@@ -23,12 +29,12 @@ const Header = () => {
         <div className="navbar-left">
             <img src={logo} alt="logo" className="nav-logo"/>
             <ul>
-                <li><a href="">Todo</a></li>
-                <li><a href="">Ropa</a></li>
-                <li><a href="">Electronica</a></li>
-                <li><a href="">Muebles</a></li>
-                <li><a href="">Juguetes</a></li>
-                <li><a href="">Otros</a></li>
+                <li><a href="/">Todo</a></li>
+                <li><a href="/clothes">Ropa</a></li>
+                <li><a href="/electronic">Electronica</a></li>
+                <li><a href="/furniture">Muebles</a></li>
+                <li><a href="/shoes">Shoes</a></li>
+                <li><a href="/others">Otros</a></li>
             </ul>
         </div>
         <div className="navbar-rigth">

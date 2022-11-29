@@ -1,6 +1,6 @@
 @import 'vars';
 
-.MyOrder {
+.MyOrder{
 	width: 360px;
 	padding: 24px;
 	box-sizing: border-box;
@@ -11,9 +11,28 @@
 	height: 100vh;
 	border-radius: 6px;
 	border: 1px solid black;
-	max-height: 700px;
+	overflow-y: scroll;
+	max-height: 600px;
 
 }
+/*with scroolbar*/
+.MyOrder::-webkit-scrollbar {
+	width: 10px;
+}
+/* Track */
+.MyOrder::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+.MyOrder::-webkit-scrollbar-thumb {
+	background: #888;
+}
+/* Handle on hover */
+.MyOrder::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
 .title-container {
 	display: flex;
 }

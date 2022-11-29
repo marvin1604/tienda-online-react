@@ -16,6 +16,11 @@ import PasswordRecovery from "../pages/PasswordRecovery"
 import SendEmail from "../pages/SendEmail"
 import AppContext from '../context/AppContext'
 import useInitialState from '../hooks/useInitialState'
+import Clothes from '../pages/Clothes'
+import Electronic from '../pages/Electronic'
+import Furniture from "../pages/Furniture"
+import Shoes from "../pages/Shoes"
+import Others from "../pages/Others"
 
 const App = () => {
   const initialState = useInitialState();
@@ -28,6 +33,11 @@ const App = () => {
             <Route path = "/" element={<Home />} />
             <Route path = "/checkout" element={<Checkout/>} />
             <Route path = "/createaccount" element={<CreateAccount/>} />
+            <Route path = "/clothes" element={<Clothes />} />
+            <Route path = "/electronic" element={<Electronic />} />
+            <Route path = "/furniture" element={<Furniture />} />
+            <Route path = "/shoes" element={<Shoes />} />
+            <Route path = "/others" element={<Others />} />
             <Route path = "/login" element={<Login/>} />
             <Route path = "/myaccount" element={<MyAccount/>}/>
             <Route path = "/newpassword" element={<NewPassword/>}/>
