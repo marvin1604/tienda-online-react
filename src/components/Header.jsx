@@ -7,25 +7,22 @@ import logo from '@logos/logo_yard_sale.svg';
 import arrow from'@icons/flechita.svg';
 import AppContext from '../context/AppContext';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
+import MenuMobile from './MenuMobile';
 
 
 const Header = () => {
     const [toggle, setToggle]= useState(false);
     const [toggleOrders, setToggleOrders] = useState(false);
-    const {state, categoriSet } = useContext(AppContext);
+    const [toggleMobile, setToggleMobile] = useState(false);
+    const {state} = useContext(AppContext);
 
     const handleToggle= () =>{
         setToggle(!toggle);
     }
 
-    const handleCategory= (event) =>{
-        console.log(event.target.name);
-        categoriSet(event.target.name);
-
-    }
   return (
     <nav>
-        <img src={menu} alt="menu" className="menu"/>
+        <img src={menu} alt="menu" className="menu" onClick={()=> setToggleMobile(!toggleMobile)} />
         <div className="navbar-left">
             <img src={logo} alt="logo" className="nav-logo"/>
             <ul>
@@ -40,7 +37,7 @@ const Header = () => {
         <div className="navbar-rigth">
             <ul>
                 <li className="navbar-email" onClick={handleToggle}>
-                    claudia@gmail.com
+                    walter.rodriguez.dev@gmail.com
                 </li>
                 <img src={arrow} alt="flechita" className="email-arrow" onClick={handleToggle}/>
                 <li 
@@ -53,7 +50,8 @@ const Header = () => {
             </ul>
         </div>
         {toggle && <Menu/>}
-        {toggleOrders && <MyOrder/>}
+        {toggleOrders && <MyOrder setToggleOrders={setToggleOrders} />}
+        {toggleMobile && <MenuMobile />}
     </nav>
   )
 }

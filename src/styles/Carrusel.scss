@@ -4,8 +4,9 @@
 }
 .slider{
     width: 100%;
-    height: 500px;
+    height: 20%px;
     overflow: hidden;
+    max-height: 500px;
 }
 .slider ul{
     padding: 0;
@@ -35,6 +36,6 @@
 
 @media(max-width:600px){
     .slider{
-        height: 120px;
+        height: 150px;
     }
 }

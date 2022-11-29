@@ -6,7 +6,6 @@ import AppContext from '../context/AppContext';
 
 const ProductList = ({categori, categoriName}) => {
   const API = `https://api.escuelajs.co/api/v1${categori}/products?limit=40&offset=1`;
-  console.log(categoriName)
   const products = useGetProducts(API);
   
   return (

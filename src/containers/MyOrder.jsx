@@ -5,7 +5,7 @@ import OrdenItem from '../components/OrdenItem'
 
 import arrow from "@icons/flechita.svg"
 
-const MyOrder = () => {
+const MyOrder = ({setToggleOrders}) => {
     const {state} = useContext(AppContext)
 
     /*Funcion acumuladora de precios de mi orden */
@@ -14,11 +14,12 @@ const MyOrder = () => {
         const sum = state.cart.reduce(reducer,0);
         return sum;
     }
+    const handleClose =() => setToggleOrders(false);
 
     return (
     <aside className="MyOrder">
         <div className="title-container">
-            <img src={arrow} alt="arrow" />
+            <img src={arrow} alt="arrow" onClick={handleClose}/>
             <p className="title">My order</p>
         </div>
         <div className="my-order-content">
