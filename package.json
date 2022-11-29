@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/marvin1604/tienda-online-react/issues"
   },
-  "homepage": "https://github.com/marvin1604/tienda-online-react#readme",
+  "homepage": "https://github.com/marvin1604/tienda-online-react",
   "dependencies": {
     "@babel/core": "^7.20.2",
     "@babel/plugin-transform-runtime": "^7.19.6",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "css-loader": "^6.7.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "mini-css-extract-plugin": "^2.7.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
