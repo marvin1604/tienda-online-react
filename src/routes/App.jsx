@@ -25,7 +25,7 @@ const App = () => {
         <Header/>
         <Layout>
           <Routes>
-            <Route path = "/" element={<Home />} />
+            <Route path = "/tienda-online-react/" element={<Home />} />
             <Route path = "/checkout" element={<Checkout/>} />
             <Route path = "/createaccount" element={<CreateAccount/>} />
             <Route path = "/login" element={<Login/>} />
