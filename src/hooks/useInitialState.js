@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const initialState ={
-    cart:[]
+    cart:[],
 }
 
 
 const useInitialState = () =>{
     const [state, setState] = useState(initialState);
-
+    
     const addToCart = (payload) =>{
         setState({
             ...state,
@@ -22,10 +22,12 @@ const useInitialState = () =>{
         })
     }
 
+
     return{
         state,
         addToCart,
-        removeToCart
+        removeToCart,
+
     }
 }
 

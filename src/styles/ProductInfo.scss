@@ -3,6 +3,9 @@
 .ProductInfo {
 	margin: 24px 24px 0 24px;
 }
+.imagenProduct{
+	width: 300px;
+}
 .ProductInfo p:nth-child(1) {
 	font-weight: bold;
 	font-size: var(--md);
@@ -26,7 +29,7 @@
 	border-radius: 8px;
 	border: none;
 	color: var(--white);
-	width: 100%;
+	width: 90%;
 	cursor: pointer;
 	font-size: var(--md);
 	font-weight: bold;

@@ -1,11 +1,14 @@
 import React from 'react'
 import "../styles/ProductDetails.scss"
+import ProductInfo from '../components/ProductInfo'
 
-const ProductDetails = () => {
+import flecha from "@icons/icon_close.png"
+const ProductDetails = ({setToggle}) => {
+  const handleClose =() => setToggle(false);
   return (
     <aside className="ProductDetail">
         <div className="ProductDetail-close">
-            <img src="./icons/icon_close.png" alt="close" />
+            <img src={flecha} alt="close" onClick={handleClose}/>
         </div>
         <ProductInfo />
     </aside>

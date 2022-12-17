@@ -7,11 +7,12 @@ const ProductItem = ({product}) => {
   const {addToCart} = useContext(AppContext);
 
   const handleCart = item=>{
-    addToCart(item);    
+    addToCart(item);
   }
   const mostrarProduct = () =>{
-    console.log(product.title);
+    console.log(product.title, product.price, product.description, product.images);
   }
+
   return (
     <div className="ProductItem">
         <img src={product.images} alt="" onClick={mostrarProduct}/>
@@ -25,6 +26,7 @@ const ProductItem = ({product}) => {
             </figure>
         </div>
     </div>
+
   )
 }
 
