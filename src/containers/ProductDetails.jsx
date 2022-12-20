@@ -1,17 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "../styles/ProductDetails.scss"
-import ProductInfo from '../components/ProductInfo'
+import ProductInfo from '../components/productInfo/ProductInfo'
 
 import flecha from "@icons/icon_close.png"
-const ProductDetails = ({setToggle}) => {
-  const handleClose =() => setToggle(false);
+import { Link } from 'wouter'
+
+const ProductDetails = () => {
   return (
-    <aside className="ProductDetail">
-        <div className="ProductDetail-close">
-            <img src={flecha} alt="close" onClick={handleClose}/>
-        </div>
-        <ProductInfo />
-    </aside>
+    <div className='container-ProductoDetail'>
+      <div className="ProductDetail">
+          <Link to="/"><i className="fa-solid fa-arrow-left"></i></Link> 
+          <ProductInfo />
+      </div>
+    </div>
   )
 }
 

@@ -1,0 +1,37 @@
+.container-circulos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.container-circulos figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6;
+
+}
+
+.container-circulos figure:hover{
+    transform: scale(1.05);
+}
+.container-circulos figcaption{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    }
+
+@media(max-width:600px){
+    .container-circulos{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .container-circulos figure{
+        width: 100px;
+    }
+    .container-circulos img{
+        width: 150px;
+    }
+}
