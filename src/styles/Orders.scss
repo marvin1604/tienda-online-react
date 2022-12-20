@@ -1,4 +1,4 @@
-@import 'vars';
+
 
 .Orders {
 	width: 100%;
@@ -6,16 +6,21 @@
 	display: grid;
 	place-items: center;
 }
-.title {
-	font-size: var(--lg);
+.title-orders {
+	font-size: 40px;
 	margin-bottom: 40px;
 }
 .Orders-container {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	width: 300px;
+	width: 600px;
 }
 .Orders-content {
 	display: flex;
 	flex-direction: column;
+}
+@media(max-width:600px){
+	.Orders-container {
+		width: 300px;
+	}
 }

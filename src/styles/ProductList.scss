@@ -1,11 +1,26 @@
-@import 'vars';
 
 .main-container{
-	margin-top: 70px;
+	margin-bottom: 20px;
 }
 
 .main-container h1{
 	text-align: center;
+}
+.main-container .imagenTop{
+	width: 100%;
+	margin: auto;
+}
+.container-input{
+	display: flex;
+	justify-content: center;
+}
+.container-input input{
+	height: 40px;
+	width: 350px;
+	padding: 8px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 1px 1px 5px 1px rgba($color: #174f9c, $alpha: 1.0);
 }
 .ProductList{
 	display: grid;

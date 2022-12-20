@@ -1,8 +1,11 @@
 import React from 'react'
 import ProductList from '../containers/ProductList'
+
+import shoes from "../assets/images/zhoes.png"
+
 const Shoes = () => {
   return (
-    <ProductList categori={"/categories/4"} categoriName={"Shoes"}/>
+    <ProductList categori={"/categories/4"} categoriName={"Shoes"} imagen={shoes}/>
   )
 }
 
