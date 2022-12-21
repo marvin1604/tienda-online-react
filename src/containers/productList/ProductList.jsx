@@ -38,7 +38,7 @@ const ProductList = ({categori, categoriName, imagen}) => {
         <input type="text" placeholder='Ingresa el producto a buscar' value={search} onChange={searcher}/>
       </div>      
       <div className="ProductList">
-        {productsItem.map(product =>(
+        {results.map(product =>(
           <ProductItem product={product} key={product.id}/>
         ))}
       </div>
