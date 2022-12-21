@@ -84,6 +84,10 @@
 	font-weight: bold;
 	height: 50px;
 	color: white;
+	transition: all 0.5s;
+}
+.orders:hover{
+	background: #628D99;
 }
 
 @media (max-width: 640px) {

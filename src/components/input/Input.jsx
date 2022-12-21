@@ -2,7 +2,7 @@ import React from 'react'
 
 const Input = ({attribute, handleChange, param}) => {
   return (
-    <div>
+    <div className='container-input'>
         <input id={attribute.id}
         name={attribute.name}
         placeholder={attribute.placeholder}
