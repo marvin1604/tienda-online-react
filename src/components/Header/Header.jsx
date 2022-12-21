@@ -35,7 +35,7 @@ const Header = () => {
                 <li><Link to="/clothes">Ropa</Link></li>
                 <li><Link to="/electronic">Electronica</Link></li>
                 <li><Link to="/furniture">Muebles</Link></li>
-                <li><Link to="/shoes">Shoes</Link></li>
+                <li><Link to="/shoes">Zapatillas</Link></li>
                 <li><Link to="/others">Otros</Link></li>
             </ul>
         </div>

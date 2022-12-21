@@ -1,8 +1,9 @@
 import React, {useEffect, useState, useContext} from 'react'
-import "@styles/ProductList.scss"
-import ProductItem from "../components/productItem/ProductItem";
+import "./ProductList.scss"
+import ProductItem from "../../components/productItem/ProductItem";
+import ProductDetails from '../productDetail/ProductDetails';
 // import useGetProducts from '../hooks/useGetProducts';
-import ProductDetails from '../containers/ProductDetails';
+
 
 
 const ProductList = ({categori, categoriName, imagen}) => {
@@ -10,7 +11,7 @@ const ProductList = ({categori, categoriName, imagen}) => {
   const [productsItem, setProductsItem] = useState([])
   const [search, setSearch] = useState("")
   const API = `https://api.escuelajs.co/api/v1${categori}/products?limit=40&offset=1`;
-  
+  // const API2 = `https://fakestoreapi.com/products/${categori}`
   // const products = useGetProducts(API);
   
   //Get Products
@@ -18,12 +19,14 @@ const ProductList = ({categori, categoriName, imagen}) => {
     const response = await fetch(API);
     const data = await response.json()
     setProductsItem(data)
+    // console.log(data);
+    
   },[])
 
   //ingreso de datos
   const searcher = (e) =>{
     setSearch(e.target.value)
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 
   // metodo filtrado

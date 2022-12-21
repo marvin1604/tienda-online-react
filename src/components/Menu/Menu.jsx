@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'wouter'
 import "./Menu.scss"
 
 const Menu = () => {
@@ -6,7 +7,7 @@ const Menu = () => {
     <div className="Menu">
         <ul>
             <li>
-                <a href="/" className="title">My orders</a>
+                <Link to="/orders" className="title">My orders</Link>
             </li>
             <li>
                 <a href="/myaccount">My account</a>

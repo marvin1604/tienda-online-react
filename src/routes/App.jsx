@@ -3,7 +3,7 @@ import { Route} from 'wouter'
 // import Provider, { AppContext } from "../hooks/Provider"
 import "@styles/global.scss"
 import Login from "../pages/login/Login"
-import Layout from '../containers/Layout'
+import Layout from '../containers/layout/Layout'
 import RecoveryPassword from '../pages/RecoveryPassword'
 import Home from '../pages/home/Home'
 import NotFound from '../pages/notfound/NotFound'
@@ -12,13 +12,13 @@ import CreateAccount from "../pages/createaccount/CreateAccount"
 import Header from '../components/Header/Header'
 import MyAccount from "../pages/myaccount/MyAccount"
 import NewPassword from "../pages/newpassword/NewPassword"
-import Orders from "../pages/Orders"
+import Orders from "../pages/orders/Orders"
 import PasswordRecovery from "../pages/PasswordRecovery"
 import SendEmail from "../pages/SendEmail"
 import Clothes from '../pages/clothes/Clothes'
 import Electronic from '../pages/electronics/Electronic'
 import Furniture from "../pages/furniture/Furniture"
-import Shoes from "../pages/Shoes"
+import Shoes from "../pages/shoes/Shoes"
 import Others from "../pages/others/Others"
 import Detalles from '../pages/detalles/Detalles'
 import useInitialState from "../hooks/useInitialState"
