@@ -2,8 +2,7 @@ import React, {useRef, useState} from 'react'
 import "./Login.scss"
 import { Link } from 'wouter'
 import Input from "../../components/input/Input"
-import logo from '@logos/logo_yard_sale.svg'
-
+import logo from '../../assets/logos/logo tienda.jpg'
 
 const Login = () => {
   const [user, setUser]= useState("")

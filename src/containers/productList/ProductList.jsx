@@ -11,6 +11,7 @@ const ProductList = ({categori, categoriName, imagen}) => {
   const [productsItem, setProductsItem] = useState([])
   const [search, setSearch] = useState("")
   const API = `https://api.escuelajs.co/api/v1${categori}/products?limit=40&offset=1`;
+  // const API2 = `https://fakestoreapi.com/products/${categori}`
   // const products = useGetProducts(API);
   
   //Get Products
@@ -27,8 +28,6 @@ const ProductList = ({categori, categoriName, imagen}) => {
 
   // metodo filtrado
   const results = !search ? productsItem : productsItem.filter(product => product.title.toString().toLowerCase().includes(search.toLowerCase()))
-  console.log(results);
-  console.log(productsItem);
   
   return (
     <section className="main-container">
