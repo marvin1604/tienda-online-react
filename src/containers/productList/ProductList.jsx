@@ -19,14 +19,11 @@ const ProductList = ({categori, categoriName, imagen}) => {
     const response = await fetch(API);
     const data = await response.json()
     setProductsItem(data)
-    // console.log(data);
-    
   },[])
 
   //ingreso de datos
   const searcher = (e) =>{
     setSearch(e.target.value)
-    // console.log(e.target.value);
   }
 
   // metodo filtrado
@@ -41,8 +38,8 @@ const ProductList = ({categori, categoriName, imagen}) => {
         <input type="text" placeholder='Ingresa el producto a buscar' value={search} onChange={searcher}/>
       </div>      
       <div className="ProductList">
-        {results.map(product =>(
-          <ProductItem product= {product} key={product.id}/>
+        {productsItem.map(product =>(
+          <ProductItem product={product} key={product.id}/>
         ))}
       </div>
     </section>

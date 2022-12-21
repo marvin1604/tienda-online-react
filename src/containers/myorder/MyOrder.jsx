@@ -38,7 +38,7 @@ const MyOrder = ({setToggleOrders}) => {
             </div>
             <Link to="/orders">
                 <div className="orders">
-                    <p>Checkout</p> 
+                   <p>Checkout</p>
                 </div>
             </Link>
             

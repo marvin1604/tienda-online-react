@@ -1,12 +1,8 @@
 import React, {useRef, useState} from 'react'
 import "./Login.scss"
 import { Link } from 'wouter'
-
 import Input from "../../components/input/Input"
 import logo from '../../assets/logos/logo tienda.jpg'
-// import ListaUsuarios from '../../ListaUsuarios'
-// import AgregarUsuario from '../../AgregarUsuario'
-// import EditarUsuario from '../../EditarUsuario'
 
 const Login = () => {
   const [user, setUser]= useState("")
@@ -57,16 +53,15 @@ const Login = () => {
                 handleChange={handleChange}
                 param={passwordError}
               />
-              <Link to="/"><button className="primary-button login-button" onClick={handleSubmit}>Iniciar Sesion</button></Link>
+              <Link to="/">
+                <button className="primary-button login-button" onClick={handleSubmit}>Iniciar Sesion</button>
+              </Link>
               
-              <a href="/passwordrecovery" className='olvide-contraseña'>Olvide mi Contraseña</a>
+              <a href="/passwordrecovery">Olvide mi Contraseña</a>
             <form action="/createaccount">
               <button className='secondary-button signup-button'>Crear Cuenta</button>
             </form>
         </div>
-        {/* <ListaUsuarios/>
-        <AgregarUsuario/>
-        <EditarUsuario/> */}
     </div>
   )
 }
