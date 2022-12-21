@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import "../styles/ProductDetails.scss"
-import ProductInfo from '../components/productInfo/ProductInfo'
+import "./ProductDetails.scss"
+import ProductInfo from '../../components/productInfo/ProductInfo'
 
 import flecha from "@icons/icon_close.png"
 import { Link } from 'wouter'

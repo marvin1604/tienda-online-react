@@ -1,24 +1,17 @@
 import React, {useRef, useState} from 'react'
 import "./Login.scss"
+import { Link } from 'wouter'
+
 import Input from "../../components/input/Input"
-import logo from '@logos/logo_yard_sale.svg'
-import ListaUsuarios from '../../ListaUsuarios'
-import AgregarUsuario from '../../AgregarUsuario'
-import EditarUsuario from '../../EditarUsuario'
+import logo from '../../assets/logos/logo tienda.jpg'
+// import ListaUsuarios from '../../ListaUsuarios'
+// import AgregarUsuario from '../../AgregarUsuario'
+// import EditarUsuario from '../../EditarUsuario'
 
 const Login = () => {
   const [user, setUser]= useState("")
   const [password, setPassword] = useState("")
   const [passwordError, setpasswordError] = useState(false)
-  // const handleSubmit = (event) =>{
-  //   event.preventDefault();
-  //   const formData = new FormData(form.current);
-  //   const data ={
-  //     username: formData.get('email'),
-  //     password: formData.get('password')
-  //   }
-  //   console.log(data)
-  // }
 
   function handleChange(name,value){
     if(name=="usuario"){
@@ -64,15 +57,16 @@ const Login = () => {
                 handleChange={handleChange}
                 param={passwordError}
               />
-              <button className="primary-button login-button" onClick={handleSubmit}>Iniciar Sesion</button>
-              <a href="/passwordrecovery">Olvide mi Contraseña</a>
+              <Link to="/"><button className="primary-button login-button" onClick={handleSubmit}>Iniciar Sesion</button></Link>
+              
+              <a href="/passwordrecovery" className='olvide-contraseña'>Olvide mi Contraseña</a>
             <form action="/createaccount">
               <button className='secondary-button signup-button'>Crear Cuenta</button>
             </form>
         </div>
-        <ListaUsuarios/>
+        {/* <ListaUsuarios/>
         <AgregarUsuario/>
-        <EditarUsuario/>
+        <EditarUsuario/> */}
     </div>
   )
 }

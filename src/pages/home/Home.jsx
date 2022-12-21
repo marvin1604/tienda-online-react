@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductList from "../../containers/ProductList"
+import ProductList from "../../containers/productList/ProductList"
 import Circulos from "../../components/circulos/Circulos"
 import Carrusel from '../../components/carrusel/Carrusel'
 

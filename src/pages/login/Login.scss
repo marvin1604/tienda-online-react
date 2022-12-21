@@ -1,7 +1,7 @@
 
 .login{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: grid;
     place-items: center;
 }
@@ -34,6 +34,11 @@
 .input-password{
     margin-bottom: 22px;
 
+}
+.olvide-contraseña{
+    color: #628D99;
+    margin-bottom: 18px ;
+    text-align: center;
 }
 .primary-button{
     background: var(--hospital-green);

@@ -36,9 +36,11 @@ const MyOrder = ({setToggleOrders}) => {
                 </p>
                 <p>${sumTotal()}</p>
             </div>
-            <div className="orders">
-                <Link to="/orders">Checkout</Link>
-            </div>
+            <Link to="/orders">
+                <div className="orders">
+                    <p>Checkout</p> 
+                </div>
+            </Link>
             
         </div>
     </aside>
